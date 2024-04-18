@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Design Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+   <title>Document</title>
+    <style>
+       
+       
+       
+       
+        #output-botton{
+
+            color: white;
+            background-color:rgb(243, 139, 5);
+            
+        } 
+        .container{
+            
+        position: relative;
+        top: 20px; 
+        height: 700px;
+        width: 700px;
+        margin: auto;
+        padding: 20px;
+        background-color: greenyellow;
+
+        }
+        #table-container{
+
+        border-radius: 30px;
+        text-align: center; 
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(218, 243, 143);
+
+        }
+
+         table {
+
+        height: 100%;
+        width: 100%;
+        justify-content: space-between;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: larger;
+        border: solid 1px white;
+
+        }
+        th{
+
+        justify-content: space-between;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: larger;
+        align-items: center;
+        border: solid 1px white;
+
+        }
+        td:hover{
+
+        box-shadow: 10px 10px 50px 0.5px rgb(232, 71, 71);
+        background-color:rgb(222, 188, 154);
+        color: black;
+        font-weight: bold;
+
+        }
+        td{
+
+        padding: 10px 50px;
+        justify-content: space-between;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: larger;
+        align-items: center;
+        border: solid 1px white;  
+
+        }
+        #header-row{
+
+        background-color: rgb(154, 225, 151);
+        }
+        .opaetor-block{
+
+        background-color: rgb(12, 126, 12);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 32px;
+             
+        }
+        #out-display{
+
+        height: 75px;
+        }
+        #total{
+
+        font-weight: bold;
+        }
+        #pastdata{
+
+        color:black;
+        }
+
+        #reset{
+
+        background-color:rgb(12, 126, 12);
+
+        }
+        #reset:hover{
+
+        background-color: rgb(222, 188, 154);
+        box-shadow: 10px 10px 50px 0.5px rgb(232, 71, 71);
+
+        }
+    </style>
+</head>
+<body>
+    <div >
+    <div class="container">
+       <div id="table-container">
+        <table>
+        <!-- <thead  >Market products</thead> -->
+        <tr>
+            <th colspan="4" style="background-color:rgb(214, 230, 170); box-shadow: none;"><p id="outdisplay">Out-display</p></th>
+        </tr>
+        <tr id="header-row">
+           <th id="out-display"style="background-color:rgb(186, 231, 212); box-shadow: none;" colspan="2" ><p id="pastdata">- - - - - - - - - - - - - - - - </p></th>
+           <th colspan="2" style="background-color: rgb(186, 231, 212);"><p id="total">total =</p></th>
+            <!-- <th>Lenovo</th>
+            <th>Maromax</th> -->
+        </tr>
+        <tr>
+            <td class="opaetor-block" onclick="division()">/</td>
+            <td colspan="2"id="reset" onclick="reset()"style=" box-shadow: none;" ><i style="color:#fff; font-size: 30px; " class="bi bi-arrow-clockwise"></i></td>
+            <td onclick="Number0()">0</td>
+        </tr>
+        <tr>
+            <td class="poretor-block" onclick="multiplication()">x</td>
+            <td onclick="Number1()">1</td>
+            <td onclick="Number2()">2</td>
+            <td onclick="Number3()">3</td>
+        </tr>
+        <tr>
+            <td class="poretor-block" onclick="subtraction()">-</td>
+            <td onclick="Number4()">4</td>
+            <td onclick="Number5()">5</td>
+            <td onclick="Number6()">6</td>
+        </tr>
+        <tr>
+            <td class="poretor-block" onclick="addition()">+</td>
+            <td onclick="Number7()">7</td>
+            <td onclick="Number8()">8</td>
+            <td onclick="Number9()">9</td>
+        </tr>
+        <tr id="output-botton">
+            <td onclick="output()" colspan="4">=</td>
+            <!-- <td>1223</td>
+            <td>5292</td>
+            <td>8445</td> -->
+        </tr>
+    </table></div>
+    </div>
+    
+    
+</div>
+<script>
+    let out="0";
+    let demoveriabale="";
+    let data1=""
+
+     function Number0(){
+       d0=0; 
+     console.log("number=0")
+     out= out + d0; 
+     console.log(out)
+     document.getElementById("outdisplay").innerHTML= out
+     }
+     
+     function Number1() {
+       d1=1; 
+     console.log("number=1")
+     out= out + d1; 
+     console.log(out)
+     
+     document.getElementById("outdisplay").innerHTML= out
+     }
+     function Number2() {
+       d2=2; 
+     console.log("number=2")
+     out= out + d2; 
+     console.log(out)
+     document.getElementById("outdisplay").innerHTML= out
+     }
+     function Number3() {
+       d3=3; 
+     console.log("number=3")
+     out= out + d3; 
+     console.log(out)
+     document.getElementById("outdisplay").innerHTML= out
+     }
+     function Number4() {
+       d4=4; 
+     console.log("number=4")
+     out= out + d4; 
+     console.log(out)
+     document.getElementById("outdisplay").innerHTML= out
+     }
+     function Number5() {
+       d5=5; 
+     console.log("number=5")
+     out= out + d5; 
+     console.log(out)
+     document.getElementById("outdisplay").innerHTML= out
+     }
+     function Number6() {
+       d6=6; 
+     console.log("number=6")
+     out= out + d6; 
+     console.log(out)
+     document.getElementById("outdisplay").innerHTML= out
+     }
+     function Number7() {
+       d7=7; 
+     console.log("number=7")
+     out= out + d7; 
+     console.log(out)
+     document.getElementById("outdisplay").innerHTML= out
+     }
+     function Number8() {
+       d8=8; 
+     console.log("number=8")
+     out= out + d8; 
+     console.log(out)
+     document.getElementById("outdisplay").innerHTML= out
+     }
+     function Number9() {
+       d6=9; 
+     console.log("number=9")
+     out= out + d9; 
+     console.log(out)
+     document.getElementById("outdisplay").innerHTML= out
+     }
+     
+     function addition() {
+      data1 = ""
+      addto=Number(out)
+     out=out +' + '; 
+     document.getElementById("outdisplay").innerHTML= out
+      data1 = out;
+      console.log("data1 ="+data1)
+     out="0"
+      demoveriabale="A"
+     }
+     function subtraction() {
+      data1 = ""
+      subto=Number(out)
+     out=out +' - '; 
+     document.getElementById("outdisplay").innerHTML= out
+     data1 = out;
+     console.log("data1 ="+data1)
+     out="0"
+       demoveriabale="B"
+     }
+     function multiplication() {
+      data1 = ""
+      multo=Number(out)
+     out=out +' x '; 
+     document.getElementById("outdisplay").innerHTML= out
+      data1 = out;
+      console.log("data1 ="+data1)
+     out="0"
+      demoveriabale="C"
+     }
+     function division() {
+      data1 = ""
+      divto=Number(out)
+     out=out +' / '; 
+     document.getElementById("outdisplay").innerHTML= out
+      data1 = out;
+      console.log("data1 ="+data1)
+     out="0"
+     demoveriabale="D"
+     }
+
+     function output(){
+      if (demoveriabale=="A") {
+        total=addto+Number(out)
+      }else if (demoveriabale=="B"){
+      total=subto-Number(out)
+      }else if (demoveriabale=="C"){
+        total=multo*Number(out)
+      }else if (demoveriabale=="D"){
+        total=divto/Number(out)
+      }else {   
+     }
+     let totaldata = data1 + out;
+     document.getElementById("total").innerHTML= Number(total)
+     let pastdata = totaldata +" = "+total;
+     document.getElementById("pastdata").innerHTML= pastdata;
+      addto="0",subto="0",multo="0", divto="0",out="0";
+      document.getElementById("outdisplay").innerHTML= "0";
+      demoveriabale="l";
+    }
+
+    function reset(){
+      addto="0",subto="0",multo="0", divto="0",out="0";
+      document.getElementById("outdisplay").innerHTML="0"
+      document.getElementById("total").innerHTML="total ="
+      document.getElementById("pastdata").innerHTML=""
+
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+</body>
+</html>
